@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d21q8m2dfo3vy"]
+
+[ext_resource type="Script" uid="uid://dyhr5dagc2w32" path="res://addons/godot_notebook/page.gd" id="2_l1xrn"]
+
+[node name="btn_page" type="Button"]
+custom_minimum_size = Vector2(60, 20)
+offset_right = 75.0
+offset_bottom = 31.0
+button_mask = 3
+text = "Page11111111111"
+alignment = 0
+script = ExtResource("2_l1xrn")
+metadata/_custom_type_script = "uid://dyhr5dagc2w32"

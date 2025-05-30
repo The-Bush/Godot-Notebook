@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b7pu3bf1cp1iu"]
+
+[node name="ConfirmDeleteDialog" type="AcceptDialog"]
+title = "Confirm"
+initial_position = 5
+visible = true

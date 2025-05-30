@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://c32rkj35np3i5"]
+
+[ext_resource type="Texture2D" uid="uid://cekf0pkbbrm0b" path="res://addons/godot_notebook/icons/plus.png" id="1_skoac"]
+[ext_resource type="Texture2D" uid="uid://d1x8j6v57k8ds" path="res://addons/godot_notebook/icons/save.png" id="2_7k4k5"]
+[ext_resource type="Texture2D" uid="uid://cy2xj2vg85fuu" path="res://addons/godot_notebook/icons/trashcan.png" id="2_skoac"]
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_rl6wq"]
+number_color = Color(0.796078, 0.803922, 0.815686, 1)
+symbol_color = Color(0.796078, 0.803922, 0.815686, 1)
+function_color = Color(0.796078, 0.803922, 0.815686, 1)
+member_variable_color = Color(0.796078, 0.803922, 0.815686, 1)
+color_regions = {
+"!!": Color(0.934609, 0.323086, 0.346985, 1),
+"##": Color(0.910135, 0.720253, 0.278246, 1),
+"++": Color(0.488179, 1, 0.456277, 1),
+"[ ]": Color(0.922794, 0.424277, 0.828, 1)
+}
+
+[node name="Notes" type="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.5
+offset_top = -76.0
+offset_right = -32.475
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="tools_container" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="btn_add_page" type="Button" parent="tools_container"]
+layout_mode = 2
+tooltip_text = "Add a new page."
+icon = ExtResource("1_skoac")
+icon_alignment = 1
+
+[node name="btn_save" type="Button" parent="tools_container"]
+layout_mode = 2
+tooltip_text = "Save all pages."
+icon = ExtResource("2_7k4k5")
+icon_alignment = 1
+
+[node name="btn_del_page" type="Button" parent="tools_container"]
+layout_mode = 2
+tooltip_text = "Delete current page."
+icon = ExtResource("2_skoac")
+
+[node name="VSeparator" type="VSeparator" parent="tools_container"]
+layout_mode = 2
+
+[node name="status_label" type="RichTextLabel" parent="tools_container"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[pulse freq=0.5]unsaved changes"
+autowrap_mode = 0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="scroll_container" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="btn_container" type="HBoxContainer" parent="scroll_container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="page_name_text_edit" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Page Name..."
+
+[node name="textEdit" type="TextEdit" parent="."]
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Start writing. . ."
+wrap_mode = 1
+caret_blink = true
+syntax_highlighter = SubResource("CodeHighlighter_rl6wq")
+highlight_all_occurrences = true
