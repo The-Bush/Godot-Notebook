@@ -14,10 +14,10 @@
 - Write, view, and review notes without leaving the Godot editor
 - Multiple pages with unique names and contents
 - Simple syntax highlighting
-	- \## to highlight line yellow ⭐
-	- ++ to highlight line green🟢
-	- !! to highlight line red😡
-	- \[ ] to highlight your "checkbox" purple🟪
+	- ``##`` to highlight line yellow ⭐
+	- ``++`` to highlight line green🟢
+	- ``!!`` to highlight line red😡
+	- ``[]`` to highlight your "checkbox" purple🟪
 ![Godot Notebook Screenshot](./capture.png)
 
 
